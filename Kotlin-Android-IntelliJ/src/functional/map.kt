@@ -1,4 +1,4 @@
-package basics
+package functional
 
 fun main(args: Array<String>) {
 
