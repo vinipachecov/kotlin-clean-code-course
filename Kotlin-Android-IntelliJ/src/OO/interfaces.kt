@@ -1,7 +1,9 @@
 package OO
 
 interface  Drivable {
-    fun drive()
+    fun drive(){
+        println("Driving")
+    }
 }
 
 class Bicycle : Drivable {
