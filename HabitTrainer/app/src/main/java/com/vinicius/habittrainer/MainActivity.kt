@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
+import com.vinicius.habittrainer.db.HabitDbTable
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.single_card.*
 
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         rv.setHasFixedSize(true)
 
         rv.layoutManager = LinearLayoutManager(this)
-        rv.adapter = HabitsAdapter(getSampleHabits())
+        rv.adapter = HabitsAdapter(HabitDbTable(this).readAllHabits())
     }
 
 //    attach our menu to the view
